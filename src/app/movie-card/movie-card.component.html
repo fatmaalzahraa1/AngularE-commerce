@@ -1,0 +1,17 @@
+
+
+<div class="card">
+  <img [src]="movie.image" class="img-fluid" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{movie.name}}</h5>
+    <p class="card-text">{{movie.description}}</p>
+    <p class="card-text"><strong>{{movie.count == 0 ? "Out Of Stock" : "In Stock"}}</strong></p>
+    <!-- <p class="card-text-"><strong [ngClass]="{'text-success': movie.count === 0 ? 'Out Of Stock' : 'In Stock'}"></strong></p> -->
+
+    <p class="card-text">{{movie.price | currency}} </p>
+    <a class="btn btn-primary" (click)="View()">View</a>
+    <p class="card-text"><small class="text-muted">{{movie.createdAt | date : 'MMMM YYYY'}}</small></p>
+    <p class="card-text"> Rate : {{movie.rate}}</p>
+
+  </div>
+</div>
