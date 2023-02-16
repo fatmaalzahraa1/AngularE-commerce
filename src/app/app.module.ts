@@ -9,6 +9,10 @@ import { MovieListComponent } from './movie-list/movie-list.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { CurrencyPipe } from './currency.pipe';
+import { LoginComponent } from './login/login.component';
+import {FormsModule} from "@angular/forms";
+import { ReactiveFormsModule } from '@angular/forms';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -17,13 +21,17 @@ import { CurrencyPipe } from './currency.pipe';
     MovieCardComponent,
     MovieListComponent,
     MovieDetailsComponent,
-    CurrencyPipe
+    CurrencyPipe,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
